@@ -5,5 +5,5 @@ Rails.application.routes.draw do
     resources :tasks 
     resources :blocks 
   end   
-  root 'users#show'
+  root "users#show"
 end
