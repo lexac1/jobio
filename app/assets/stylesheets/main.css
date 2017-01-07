@@ -1,3 +1,4 @@
+/*start day button*/
 .start{
 	float:right;
 	margin-right: 5%;
@@ -5,7 +6,30 @@
 
 }
 
+/*add tasks form*/
+#tasks-form{
+	
+	width: 45%;
+	display: block;
+	float:right;
+	border: solid white 8px;
+    margin-left:20px; 
+}
 
+
+/*added tasks container*/
+#tasks-container{
+
+ width: 45%;
+ display: block;
+ float: left; 
+ border: solid white 8px;
+ margin-right:20px;
+}
+/*advanced mode calendar*/
+#calendar{
+
+}
 /*css for mode-switch  https://proto.io/freebies/onoff/ */
 
 .onoffswitch {
