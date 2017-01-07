@@ -1,6 +1,7 @@
 $( document ).on('turbolinks:load', function(){
-	$(".start").on("click", function(event){
-		console.log("clicked");
+	
+  $(".start").on("click", function(event){
+		// console.log("clicked");
 		$('#line-container').show();
         var line = new ProgressBar.Line('#line-container', {
         strokeWidth: 3,
@@ -11,5 +12,12 @@ $( document ).on('turbolinks:load', function(){
       line.set(1);
       line.animate(0,0);
 })
+ $("#settings-button").on("click", function(event){
+  event.preventDefault();
+  // console.log("clicked settings");
+  $("#main-page").css("display", "none");
+  $("#settings").show();
+  
+ })
 
 });
