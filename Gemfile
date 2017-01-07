@@ -57,6 +57,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
  gem 'awesome_print'
  gem 'better_errors'
  gem 'binding_of_caller'
+ gem 'pry-rails'
+ gem 'rb-readline'
 
  # Bootstrap sass gems
  gem 'bootstrap-sass', '~> 3.3.6'
