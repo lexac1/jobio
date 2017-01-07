@@ -10,14 +10,16 @@
         </div>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav">
+              <% if current_user %>
                 <li><a href="#"><%=current_user.email%></a></li>
+              <% end %>  
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Settings</a></li>
                 <% if current_user %>
-                    <li><a href="">Logout</a></li>
+                    <li><%=link_to 'Sign out', destroy_user_session_path, :method => :delete%></li>
                 <% else %>
-                    <li><a href="/users/sign_out">Log In</a></li>   
+                    <li><%=link_to 'Sign In', new_user_session_path%></li>   
                 <% end %>     
             </ul>
         </div>

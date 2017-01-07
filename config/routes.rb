@@ -5,5 +5,13 @@ Rails.application.routes.draw do
     resources :tasks 
     resources :blocks 
   end   
-  root "users#show"
+  
+  devise_scope :user do
+  	authenticated :user do
+    	root :to => 'users#show', as: :authenticated_root
+    end
+  	unauthenticated :user do
+    	root :to => 'devise/registrations#new', as: :unauthenticated_root
+  end
+end
 end
