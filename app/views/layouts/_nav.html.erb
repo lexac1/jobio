@@ -14,7 +14,11 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Settings</a></li>
-                <li><%=@user%></li>
+                <% if current_user %>
+                    <li><a href="">Logout</a></li>
+                <% else %>
+                    <li><a href="/users/sign_out">Log In</a></li>   
+                <% end %>     
             </ul>
         </div>
     </div>
