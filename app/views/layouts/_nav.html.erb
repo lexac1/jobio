@@ -1,0 +1,27 @@
+<div class="bs-component live-less-editor-hovercontainer" data-relatedvars="navbar-height,navbar-margin-bottom,navbar-border-radius,navbar-collapse-max-height,navbar-default-bg,navbar-default-border,navbar-default-brand-color,navbar-default-brand-hover-color,navbar-default-brand-hover-bg,navbar-default-color,navbar-default-link-color,navbar-default-link-hover-color,navbar-default-link-hover-bg,navbar-default-link-active-color,navbar-default-link-active-bg,navbar-default-link-disabled-color,navbar-default-link-disabled-bg,navbar-default-toggle-border-color,navbar-default-toggle-hover-bg,navbar-default-toggle-icon-bar-bg,navbar-default-link-active-bg,navbar-default-link-active-color">
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Jobio</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+              <% if current_user %>
+                <li><a href="#"><%=current_user.email%></a></li>
+              <% end %>  
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Settings</a></li>
+                <% if current_user %>
+                    <li><%=link_to 'Sign out', destroy_user_session_path, :method => :delete%></li>
+                <% else %>
+                    <li><%=link_to 'Sign In', new_user_session_path%></li>   
+                <% end %>     
+            </ul>
+        </div>
+    </div>
+</div>
