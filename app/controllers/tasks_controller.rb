@@ -11,29 +11,15 @@ class TasksController < ApplicationController
   end 
 
   def create 
-    @user = User.find(current_user.id)
-    @task = @user.tasks.new(task_params)
+    @task = current_user.tasks.new(task_params)
     if @task.save && request.xhr?
     	render json:@task
-    else render "new"
-    end	
+    else 
+    	redirect_to authenticated_root_path
+    p current_user.tasks
+    end
   end 
 
-  def show 
-
-  end 
-
-  def edit 
-
-  end 
-
-  def update 
-
-  end 
-
-  def destroy
-
-  end 	
 
   private
   def task_params

@@ -1,0 +1,10 @@
+<%= form_for @task do |f| %>
+      <%= f.text_field :name, :placeholder => "name"%><br>
+       <%= f.select(:category_id) do%>
+          <%  ["Deliverables","Drills","Job Hunt"].each do |c| %>
+            <%= content_tag(:option, c, value: c) %>
+        <% end %>
+        <%= f.hidden_field :complete, :value => false %>
+      <% end %><br>
+      <%= f.submit "Add Task", :class => "btn btn-default" %>
+      <% end %>
