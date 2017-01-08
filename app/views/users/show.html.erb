@@ -31,14 +31,22 @@
 	</div>
    
    <!-- add tasks form -->
+    <div id="form-label">
+    <h3>Add a new task</h3>
     <div id="tasks-form">
     	 <%= render "tasks/task" %> 
     </div>
+    </div>
    <!-- tasks added scrollable container -->
+	<div id="tasks-label">
+	<h3>Your Tasks</h3>
 	<div id="tasks-container">
+		
 		<% @tasks.each do |task| %>
-         <%= task.name %>
+        <li> <%= task.name %><li>
+        <br>
         <% end %>  
+	</div>
 	</div>
    <!-- advanced mode dragable calendar -->
 	<div id="calendar">

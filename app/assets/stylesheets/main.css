@@ -7,31 +7,48 @@
 }
 
 /*add tasks form*/
-#tasks-form{
-	
-	width: 45%;
-	display: block;
-	float:left;
-	border: solid white 8px;
+#form-label{
+    width: 45%;
+    display: block;
+    float:left;
     margin-left:20px; 
+}
+
+#form-label h3 {
+    text-align: center;
+}
+
+#tasks-form{
+	border: solid white 8px;
+    padding:2%;
+    
 }
 
 
 /*added tasks container*/
-#tasks-container{
-
+#tasks-label{
  width: 45%;
  display: block;
  float: right; 
- border: solid white 8px;
  margin-right:20px;
+
+}
+#tasks-label h3{
+    text-align: center;
+}
+#tasks-container{
+ overflow: scroll;
+ border: solid white 8px;
+ padding: 2%;
 }
 /*advanced mode calendar*/
 #calendar{
 
 }
 /*css for mode-switch  https://proto.io/freebies/onoff/ */
-
+#mode-switch{
+  margin-bottom: 5%;
+}
 .onoffswitch {
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
