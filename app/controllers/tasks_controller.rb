@@ -12,7 +12,7 @@ class TasksController < ApplicationController
 
   def create 
     @task = current_user.tasks.new(task_params)
-    if @task.save && request.xhr?
+    if @task.save
     	render json:@task
     else 
     	redirect_to authenticated_root_path
@@ -23,7 +23,7 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:name, :user_id, :category_id, :complete)
+    params.require(:task).permit(:name, :category_id, :complete, :user_id)
   end
 
 

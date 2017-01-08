@@ -1,8 +1,10 @@
 <%= form_for @task do |f| %>
+      <%= label_tag(:name, "Task Description: ") %>
       <%= f.text_field :name, :placeholder => "name"%><br>
+      <%= label_tag(:category_id, "Task Category: ") %>
        <%= f.select(:category_id) do%>
-          <%  ["Deliverables","Drills","Job Hunt"].each do |c| %>
-            <%= content_tag(:option, c, value: c) %>
+          <%  ["Deliverables","Drills","Job Hunt"].each_with_index do |item, index| %>
+            <%= content_tag(:option, item, value: index) %>
         <% end %>
         <%= f.hidden_field :complete, :value => false %>
       <% end %><br>
