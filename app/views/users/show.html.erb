@@ -32,19 +32,13 @@
    
    <!-- add tasks form -->
     <div id="tasks-form">
-    	 <%#= form_for Task.new do |f| %>`
-       		 <%#= f.text_field :name, :placeholder => "name"%><br>
-       		 <%#= f.select(:category_id) do%>
-          		<%#  ["Deliverables","Drills","Job Hunt"].each do |c| %>
-            		<%#= content_tag(:option, c, value: c) %>
-        	<%# end %>
-      <%# end %><br>
-      <%#= f.submit "Add Task", :class => "btn btn-default" %>
-      <%# end %>
+    	 <%= render "tasks/new" %> 
     </div>
    <!-- tasks added scrollable container -->
 	<div id="tasks-container">
-		
+		<% @tasks.each do |task| %>
+         <%= task.name %>
+        <% end %>  
 	</div>
    <!-- advanced mode dragable calendar -->
 	<div id="calendar">

@@ -11,7 +11,7 @@
 	
 	width: 45%;
 	display: block;
-	float:right;
+	float:left;
 	border: solid white 8px;
     margin-left:20px; 
 }
@@ -22,7 +22,7 @@
 
  width: 45%;
  display: block;
- float: left; 
+ float: right; 
  border: solid white 8px;
  margin-right:20px;
 }
