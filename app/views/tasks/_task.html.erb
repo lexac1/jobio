@@ -3,8 +3,8 @@
       <%= f.text_field :name, :placeholder => "name"%><br>
       <%= label_tag(:category_id, "Task Category: ") %>
        <%= f.select(:category_id) do%>
-          <%  ["Deliverables","Drills","Job Hunt"].each_with_index do |item, index| %>
-            <%= content_tag(:option, item, value: index) %>
+          <%  ["Resume","Projects","Outreach", "Web Presence", "Drills"].each_with_index do |item, index| %>
+            <%= content_tag(:option, item, value: index + 1) %>
         <% end %>
         <%= f.hidden_field :complete, :value => false %>
       <% end %><br>

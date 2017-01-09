@@ -4,15 +4,8 @@
 	<button class="start">Start Day</button>
 
 	<h2>current category</h2>
-	
+
 	<div class="progress" id="line-container" style="display: none;"></div>
-	
-	<h3>Description</h3>
-	<ul>
-	  <li>task</li>
-	  <li>task</li>
-	  <li>task</li>	
-	</ul>
 
 </div>
 
@@ -29,27 +22,33 @@
 	  	   </label>
 		</div>
 	</div>
-   
+
    <!-- add tasks form -->
     <div id="form-label">
     <h3>Add a new task</h3>
     <div id="tasks-form">
-    	 <%= render "tasks/task" %> 
+    	 <%= render "tasks/task" %>
     </div>
     </div>
    <!-- tasks added scrollable container -->
 	<div id="tasks-label">
 	<h3>Your Tasks</h3>
 	<div id="tasks-container">
-		
-		<% @tasks.each do |task| %>
-        <li> <%= task.name %><li>
-        <br>
-        <% end %>  
+
+	<% @sorted.each do |sorted| %>
+	<div class="block" id="<%= sorted.id %>">
+	<h3><%= sorted.category.name %></h3>
+	<ul>
+	  <% @tasks.where(category_id: sorted.category_id).each do |task| %>
+	  <li>
+	    <%= task.name %>: <%= task.complete %>
+	  </li>
+	  <% end %>
+	</ul>
 	</div>
-	</div>
+	<% end %>
    <!-- advanced mode dragable calendar -->
 	<div id="calendar">
-	
+
 	</div>
 </div>

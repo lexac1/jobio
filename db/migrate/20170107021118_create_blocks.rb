@@ -4,6 +4,7 @@ class CreateBlocks < ActiveRecord::Migration[5.0]
       t.integer :user_id
       t.integer :category_id
       t.datetime :due
+      t.integer :order, { default: 0 }
 
       t.timestamps
     end
