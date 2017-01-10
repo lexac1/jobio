@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(version: 20170107021118) do
     t.integer  "user_id"
     t.integer  "category_id"
     t.datetime "due"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "order",       default: 0
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "categories", force: :cascade do |t|
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 20170107021118) do
     t.integer  "user_id"
     t.integer  "category_id"
     t.boolean  "complete"
+    t.integer  "priority"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
