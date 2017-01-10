@@ -3,10 +3,20 @@
 <div id="main-page">
 	<button class="start">Start Day</button>
 
-	<h2>current category</h2>
+
 
 	<div class="progress" id="line-container" style="display: none;"></div>
+    
+    <div id="current-work">
+      	<h2><%=@blocks.first.category.name%></h2>
+      	 <ul>
+      	 	<%@user.blocks.each do |block| %>
+      	 	  <li><%=Task.find(block.category.id).name %></li>
+      	 	<%end%>   
+      	 </ul>
 
+      	
+    </div>
 </div>
 
 <div id="settings" style="display:none;">
@@ -33,22 +43,20 @@
    <!-- tasks added scrollable container -->
 	<div id="tasks-label">
 	<h3>Your Tasks</h3>
+	
 	<div id="tasks-container">
+       <div class="row">
+  	     <div class="col-md-5 col-md-offset-4 sortable">
+           <% if @blocks.any? %>
+             <%= render  partial: 'blocks', locals: {blocks: @blocks} %>
+           <% else %>
+              <p>No tasks found <%= link_to "Create Task", new_task_path %></p>
+            <% end %>
+         </div>
+        </div>
+	  </div>
+	  </div>
 
-	<% @sorted.each do |sorted| %>
-	<div class="block" id="<%= sorted.id %>">
-	<h3><%= sorted.category.name %></h3>
-	<h1><%= sorted.order %></h1>
-	<h2 class="order" id="<%= sorted.order %>"></h2>
-	<ul>
-	  <% @tasks.where(category_id: sorted.category_id).each do |task| %>
-	  <li>
-	    <%= task.name %>: <%= task.complete %>
-	  </li>
-	  <% end %>
-	</ul>
-	</div>
-	<% end %>
    <!-- advanced mode dragable calendar -->
 	<div id="calendar">
      <button>send order</button>
