@@ -11,11 +11,11 @@
       	<h2><%=@blocks.first.category.name%></h2>
       	 <ul>
       	 	<%@user.blocks.each do |block| %>
-      	 	  <li><%=Task.find(block.category.id).name %></li>
-      	 	<%end%>   
+      	 	  <% block.category.tasks.each do |task| %>
+						<li><%= task.name %></li>
+						<% end %>
+      	 	<%end%>
       	 </ul>
-
-      	
     </div>
 </div>
 
