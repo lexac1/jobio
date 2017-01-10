@@ -38,18 +38,17 @@ $( document ).on('turbolinks:load', function(){
 		}
 
 		// datas = Array.from(datas)
-		console.log(blocks)
-		console.log("**********************")
-		console.log(data)
+		// console.log(blocks)
+		// console.log("**********************")
+		// console.log(data)
 		// data = JSON.stringify(datas)
 		// console.log(Array.from(data));
 		// console.log("CLICKED!!!");
 		$.ajax({
 			type: 'PUT',
-      dataType:"script",
+            dataType:"json",
 			url: "/users/"+user,
-			contentType : "application/json",
-			data: JSON.stringify({ blocks: data, _method: 'put' })
+			data: { blocks: JSON.stringify(data), _method: 'put' }
 
 		})
  })
