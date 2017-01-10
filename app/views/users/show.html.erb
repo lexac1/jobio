@@ -1,5 +1,5 @@
 <script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.6.0/dist/progressbar.js"></script>
-
+<h2 id="user" style="display: none;"><%= current_user.id %></h2>
 <div id="main-page">
 	<button class="start">Start Day</button>
 
@@ -38,6 +38,8 @@
 	<% @sorted.each do |sorted| %>
 	<div class="block" id="<%= sorted.id %>">
 	<h3><%= sorted.category.name %></h3>
+	<h1><%= sorted.order %></h1>
+	<h2 class="order" id="<%= sorted.order %>"></h2>
 	<ul>
 	  <% @tasks.where(category_id: sorted.category_id).each do |task| %>
 	  <li>
@@ -49,6 +51,9 @@
 	<% end %>
    <!-- advanced mode dragable calendar -->
 	<div id="calendar">
-
+     <button>send order</button>
 	</div>
+
+
 </div>
+</body>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :tasks
+  resources :users
 
   devise_scope :user do
   	authenticated :user do
@@ -9,6 +10,6 @@ Rails.application.routes.draw do
     end
   	unauthenticated :user do
     	root :to => 'devise/registrations#new', as: :unauthenticated_root
+    end
   end
-end
 end
