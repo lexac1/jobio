@@ -3,6 +3,20 @@
 	float:right;
 	margin-right: 5%;
 	color: orange;
+    margin-bottom: 20px;
+
+}
+#line-container{
+    margin-bottom: 20px;
+}
+#current-work{
+   clear:both;
+    margin-top: 10px;
+    margin-left:40%;
+
+}
+#current-work h2{
+    color:orange;
 
 }
 
