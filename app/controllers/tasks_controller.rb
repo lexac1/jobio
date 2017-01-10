@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   protect_from_forgery with: :exception
 
   def index
-
+    @tasks = Task.all
   end
 
   def new
@@ -20,9 +20,12 @@ class TasksController < ApplicationController
     end
   end
 
-  def update
+  def sort
+    params[:order].each do |key,value|
+      Block.find(value[:id]).update_attribute(:priority,value[:position])
+    end
+    render :nothing => true
   end
-
 
   private
   def task_params

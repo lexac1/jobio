@@ -19,37 +19,6 @@ $( document ).on('turbolinks:load', function(){
   $("#settings").show();
 
  })
- $("#calendar").on("click", function(event){
-	  event.preventDefault();
-		var blocks = $("#tasks-container").children("div.block");
-		var orders = $("#tasks-container").find("h2");
-		// console.log("orders are herehrhehrhehrhehe")
-		// console.log(orders)
+ 
 
-		var user = $('#user').html()
-		console.log(user)
-
-		// var ids = {};
-		// var orders = {};
-		var data = [];
-		for (let i = 0; i < blocks.length; i ++) {
-
-			data.push({ id: blocks[i].id, order: orders[i].id });
-		}
-
-		// datas = Array.from(datas)
-		// console.log(blocks)
-		// console.log("**********************")
-		// console.log(data)
-		// data = JSON.stringify(datas)
-		// console.log(Array.from(data));
-		// console.log("CLICKED!!!");
-		$.ajax({
-			type: 'PUT',
-            dataType:"json",
-			url: "/users/"+user,
-			data: { blocks: JSON.stringify(data), _method: 'put' }
-
-		})
- })
 });
