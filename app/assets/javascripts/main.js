@@ -46,7 +46,16 @@ $('#myModalNorm').modal({ show: false});
     $("#main-page").css("display", "none");
     $("#settings").show();
 
-  })
+  }) 
+
+   $("#form-button").on("click",function(e){
+        $("#TaskModal").modal('show')
+        $("#NEWTASK").on("click",function(e){
+          $("#TaskModal").modal({ show: false});
+          $(document).ready(ready);
+        })
+
+   })
 
 
 });

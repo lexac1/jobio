@@ -1,12 +1,39 @@
-<%= form_for @task do |f| %>
-      <%= label_tag(:name, "Task Description: ") %>
-      <%= f.text_field :name, :placeholder => "name"%><br>
-      <%= label_tag(:category_id, "Task Category: ") %>
-       <%= f.select(:category_id) do%>
-          <%  ["Resume","Projects","Outreach", "Web Presence", "Drills"].each_with_index do |item, index| %>
-            <%= content_tag(:option, item, value: index + 1) %>
-        <% end %>
-        <%= f.hidden_field :complete, :value => false %>
-      <% end %><br>
-      <%= f.submit "Add Task", :class => "btn btn-default" %>
-      <% end %>
+
+      
+
+<div class="modal fade" id="TaskModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close"
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Create A New Task
+                </h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+              <%= bootstrap_form_for @task do |f| %>
+                <%= label_tag(:name, "Task Description: ") %>
+                  <%= f.text_field :name, :placeholder => "name"%><br>
+                  <%= label_tag(:category_id, "Task Category: ") %>
+                  <%= f.select(:category_id) do%>
+                    <%  ["Resume","Projects","Outreach", "Web Presence", "Drills"].each_with_index do |item, index| %>
+                    <%= content_tag(:option, item, value: index + 1) %>
+                    <% end %>
+                  <%= f.hidden_field :complete, :value => false %>
+                  <% end %><br>
+                <%= f.submit "Add Task", :class => "btn btn-default", :id => "NEWTASK" %>
+              <% end %>
+             </div>
+             </div>
+             </div> 
+              </div>
+

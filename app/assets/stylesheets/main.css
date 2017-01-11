@@ -19,14 +19,15 @@
 }
 #current-work{
    clear:both;
-   width: 800px;
+    text-align: center;
     margin-top: 10px;
-    margin-left:40%;
+  
 
 }
 
 #current-work h2{
     color:orange;
+
 
 }
 
@@ -49,6 +50,19 @@
  }
  .panel-heading{
     background-color: #545966;
+}
+.todo-items{
+    clear:both;
+}
+.todos{
+  margin: 0 auto;
+  list-style-type: none;
+  border: solid #545966 ;
+  text-align: center;
+  background-color: #545966;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  margin-right: 2%;
 }
 
 
