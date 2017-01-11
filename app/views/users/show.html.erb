@@ -3,21 +3,20 @@
 <div id="main-page">
 	<button class="start">Start Day</button>
 
+	<%= render 'tasks/modal' %>
 
-
-	
-    <div id="current-work">
-      	<h2><%=@blocks.first.category.name%></h2>
-      	<div class="progress" id="line-container" style="display: none;"></div>
-    		<div id="time"></div>
-      	 <ul>
-      	 	<%@user.blocks.each do |block| %>
-      	 	  <% block.category.tasks.each do |task| %>
-						<li><%= task.name %></li>
-						<% end %>
-      	 	<%end%>
-      	 </ul>
-    </div>
+	<div id="current-work">
+		<h2><%=@blocks.first.category.name%></h2>
+		<div class="progress" id="line-container" style="display: none;"></div>
+		<div id="time"></div>
+		<ul>
+			<%@user.blocks.each do |block| %>
+			<% block.category.tasks.each do |task| %>
+			<li><%= task.name %></li>
+			<% end %>
+			<%end%>
+		</ul>
+	</div>
 </div>
 
 <div id="settings" style="display:none;">
@@ -26,41 +25,41 @@
 	<div id= "mode-switch">
 		<h4 id="mode-switch-Label">Advanced Mode</h4>
 		<div class="onoffswitch">
-		    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-		    <label class="onoffswitch-label" for="myonoffswitch">
-		        <span class="onoffswitch-inner"></span>
-		        <span class="onoffswitch-switch"></span>
-	  	   </label>
+			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+			<label class="onoffswitch-label" for="myonoffswitch">
+				<span class="onoffswitch-inner"></span>
+				<span class="onoffswitch-switch"></span>
+			</label>
 		</div>
 	</div>
 
-   <!-- add tasks form -->
-    <div id="form-label">
-    <h3>Add a new task</h3>
-    <div id="tasks-form">
-    	 <%= render "tasks/task" %>
-    </div>
-    </div>
-   <!-- tasks added scrollable container -->
+	<!-- add tasks form -->
+	<div id="form-label">
+		<h3>Add a new task</h3>
+		<div id="tasks-form">
+			<%= render "tasks/task" %>
+		</div>
+	</div>
+	<!-- tasks added scrollable container -->
 	<div id="tasks-label">
-	<h3>Your Tasks</h3>
-	
-	<div id="tasks-container">
-       <div class="row">
-  	     <div class="col-md-5 col-md-offset-4 sortable">
-           <% if @blocks.any? %>
-             <%= render  partial: 'blocks', locals: {blocks: @blocks} %>
-           <% else %>
-              <p>No tasks found <%= link_to "Create Task", new_task_path %></p>
-            <% end %>
-         </div>
-        </div>
-	  </div>
-	  </div>
+		<h3>Your Tasks</h3>
 
-   <!-- advanced mode dragable calendar -->
+		<div id="tasks-container">
+			<div class="row">
+				<div class="col-md-5 col-md-offset-4 sortable">
+					<% if @blocks.any? %>
+					<%= render  partial: 'blocks', locals: {blocks: @blocks} %>
+					<% else %>
+					<p>No tasks found <%= link_to "Create Task", new_task_path %></p>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- advanced mode dragable calendar -->
 	<div id="calendar">
-  
+
 	</div>
 
 
