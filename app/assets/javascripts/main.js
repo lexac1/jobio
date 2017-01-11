@@ -3,7 +3,7 @@ $('#myModalNorm').modal({ show: false});
   $(".start").on("click", function(event){
     // console.log("clicked");
     $("#settings-button").hide();
-    var fiftyFiveMinutes = 60 * .1,
+    var fiftyFiveMinutes = 60 * 55,
     display = document.querySelector('#time');
     startTimer(fiftyFiveMinutes, display);
     $('#line-container').show();

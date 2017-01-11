@@ -35,48 +35,61 @@
 	margin-bottom: 5px;
 }
 
+
+
+
+                        /*SORTABLE STYLING*/
+/*block category heading*/
+.sortable {
+
+    width: 100%;
+}
+.sortable .panel-title{
+    color: orange;
+ }
+ .panel-heading{
+    background-color: #545966;
+}
+
+
+
+
+
 /*add tasks form*/
-#form-label{
-    width: 45%;
-    display: block;
-    float:left;
-    margin-left:20px;
-}
 
-#form-label h3 {
-    text-align: center;
-}
 
-#tasks-form{
-	border: solid white 8px;
-    padding:2%;
 
-}
 
 
 /*added tasks container*/
 #tasks-label{
- width: 45%;
- display: block;
- float: right;
- margin-right:20px;
+ width: 100%;
 
 }
 #tasks-label h3{
     text-align: center;
 }
-#tasks-container{
- overflow: scroll;
- border: solid white 8px;
- padding: 2%;
-}
+
 /*advanced mode calendar*/
 #calendar{
 
 }
+
+.user-config{
+    width:100%;
+   
+}
+.blocks {
+    width:100px;
+    display:inline-block;
+     vertical-align: bottom; 
+}
+
+
 /*css for mode-switch  https://proto.io/freebies/onoff/ */
 #mode-switch{
-  margin-bottom: 5%;
+
+  
 }
 .onoffswitch {
     position: relative; width: 90px;

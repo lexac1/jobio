@@ -20,9 +20,10 @@
 </div>
 
 <div id="settings" style="display:none;">
-	<h2> SETTINGS DIV!</h2>
+
 	<!-- mode switch -->
-	<div id= "mode-switch">
+	<div class="user-config">
+	<div id="mode-switch" class="blocks">
 		<h4 id="mode-switch-Label">Advanced Mode</h4>
 		<div class="onoffswitch">
 			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -34,19 +35,17 @@
 	</div>
 
 	<!-- add tasks form -->
-	<div id="form-label">
-		<h3>Add a new task</h3>
-		<div id="tasks-form">
-			<%= render "tasks/task" %>
-		</div>
+	<div id="form-button" class="blocks">
+		<button type="button" class="btn btn-default">Add Task</button>
+	</div>
 	</div>
 	<!-- tasks added scrollable container -->
 	<div id="tasks-label">
 		<h3>Your Tasks</h3>
 
-		<div id="tasks-container">
+		
 			<div class="row">
-				<div class="col-md-5 col-md-offset-4 sortable">
+				<div class="col-xs-12 .col-sm-6 .col-lg-8 sortable">
 					<% if @blocks.any? %>
 					<%= render  partial: 'blocks', locals: {blocks: @blocks} %>
 					<% else %>
@@ -55,7 +54,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+
 
 	<!-- advanced mode dragable calendar -->
 	<div id="calendar">
