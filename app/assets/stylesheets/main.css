@@ -1,6 +1,7 @@
 body {
   background-image: url("bg1.png");
 }
+
 /*start day button*/
 .start{
 	float:right;
@@ -85,8 +86,8 @@ body {
 
 /*added tasks container*/
 #tasks-label{
- width: 100%;
-
+ width: 500px;
+ margin:0 auto;
 }
 #tasks-label h3{
     text-align: center;
