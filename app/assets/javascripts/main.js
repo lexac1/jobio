@@ -40,6 +40,7 @@ function startTimer(duration, display) {
 
  $("#settings-button").on("click", function(event){
   event.preventDefault();
+  $("#settings-button").hide();
   // console.log("clicked settings");
   $("#main-page").css("display", "none");
   $("#settings").show();
