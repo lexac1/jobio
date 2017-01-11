@@ -29,8 +29,12 @@ ready = function(){
         // send the updated order via ajax
         $.ajax({
             type: "PUT",
-            url: '/tasks/sort',
-            data: { order: updated_order }
+            url: '/blocks/sort',
+            data: { order: updated_order },
+            success: function() {   
+                $("#settings").reload();
+                
+            }
         });
     });
 }
