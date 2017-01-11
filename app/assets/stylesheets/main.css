@@ -1,3 +1,6 @@
+body {
+  background-image: url("bg1.png");
+}
 /*start day button*/
 .start{
 	float:right;

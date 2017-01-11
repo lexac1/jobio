@@ -2,7 +2,7 @@ $( document ).on('turbolinks:load', function(){
 $('#myModalNorm').modal({ show: false});
   $(".start").on("click", function(event){
     // console.log("clicked");
-    $(".start").hide()
+    $(".start").hide();
     $("#settings-button").hide();
     var fiftyFiveMinutes = 60 * 55,
     display = document.querySelector('#time');
