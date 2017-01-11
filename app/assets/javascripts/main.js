@@ -46,6 +46,7 @@ $('#myModalNorm').modal({ show: false});
     // console.log("clicked settings");
     $("#main-page").css("display", "none");
     $("#settings").show();
+    $("#settings").addClass("animated slideInUp");
 
   }) 
 
