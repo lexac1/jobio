@@ -5,17 +5,18 @@
 
 
 
-	<div class="progress" id="line-container" style="display: none;"></div>
-    
+	
     <div id="current-work">
       	<h2><%=@blocks.first.category.name%></h2>
+      	<div class="progress" id="line-container" style="display: none;"></div>
+    		<div id="time"></div>
       	 <ul>
       	 	<%@user.blocks.each do |block| %>
-      	 	  <li><%=Task.find(block.category.id).name %></li>
-      	 	<%end%>   
+      	 	  <% block.category.tasks.each do |task| %>
+						<li><%= task.name %></li>
+						<% end %>
+      	 	<%end%>
       	 </ul>
-
-      	
     </div>
 </div>
 
@@ -59,7 +60,7 @@
 
    <!-- advanced mode dragable calendar -->
 	<div id="calendar">
-     <button>send order</button>
+  
 	</div>
 
 

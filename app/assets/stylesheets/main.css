@@ -4,17 +4,27 @@
 	margin-right: 5%;
 	color: orange;
     margin-bottom: 20px;
-
 }
 #line-container{
-    margin-bottom: 20px;
+   /* clear:both;*/
+  
+    width: 500px;
+}
+
+#time{
+    font-size: 30px;
+    color: orange;
+    margin: auto;
+    width: 50px;
 }
 #current-work{
    clear:both;
+   width: 800px;
     margin-top: 10px;
     margin-left:40%;
 
 }
+
 #current-work h2{
     color:orange;
 
