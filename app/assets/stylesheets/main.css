@@ -6,7 +6,7 @@
     margin-bottom: 20px;
 }
 #line-container{
-   /* clear:both;*/
+   margin:0 auto;
   
     width: 500px;
 }
