@@ -1,9 +1,9 @@
 $( document ).on('turbolinks:load', function(){
-
+$('#myModalNorm').modal({ show: false});
   $(".start").on("click", function(event){
     // console.log("clicked");
     $("#settings-button").hide();
-    var fiftyFiveMinutes = 60 * 55,
+    var fiftyFiveMinutes = 60 * .1,
     display = document.querySelector('#time');
     startTimer(fiftyFiveMinutes, display);
     $('#line-container').show();
@@ -32,7 +32,7 @@ $( document ).on('turbolinks:load', function(){
       display.textContent = minutes + ":" + seconds;
 
       if (--timer < 0) {
-        timer = duration;
+        $("#myModalNorm").modal('show')
       }
     }, 1000);
   }
@@ -40,6 +40,7 @@ $( document ).on('turbolinks:load', function(){
 
   $("#settings-button").on("click", function(event){
     event.preventDefault();
+   $(document).ready(ready);
     $("#settings-button").hide();
     // console.log("clicked settings");
     $("#main-page").css("display", "none");

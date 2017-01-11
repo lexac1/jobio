@@ -32,7 +32,9 @@ ready = function(){
             url: '/blocks/sort',
             data: { order: updated_order },
             success: function() {   
-                $("#settings").reload();
+                 
+        
+
                 
             }
         });
