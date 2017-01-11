@@ -2,6 +2,7 @@ $( document ).on('turbolinks:load', function(){
 
   $(".start").on("click", function(event){
 		// console.log("clicked");
+    $("#settings-button").hide();
      var fiftyFiveMinutes = 60 * 55,
         display = document.querySelector('#time');
     startTimer(fiftyFiveMinutes, display);
