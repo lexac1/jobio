@@ -19,18 +19,11 @@
 
             <!-- Modal Body -->
             <div class="modal-body">
-
-              <%= bootstrap_form_for @task do |f| %>
-              <% @user.blocks.each do |block| %>
-                <% block.category.tasks.each do |task| %>
-                  <%= radio_button_tag(:complete, true) %>
-                  <%= label_tag(:complete, task.name) %><br>
-                <% end %>
-              <%end%><br>
-                <div class="modal-footer">
-                    <%= f.submit %>
-                <% end %>
-                </div>
+              <h4>Good work!</h4>
+              <h4>Take 5 and click to contine to next block.</h4>
+              <div class="modal-footer">
+                <button class="btn btn-primary" type="button">Next Block</button>
+              </div>
             </div>
         </div>
     </div>
