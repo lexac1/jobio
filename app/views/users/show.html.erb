@@ -3,7 +3,7 @@
 <div id="main-page">
 	<button class="start btn btn-primary">Start Day</button>
 
-	<%= render 'tasks/modal' %>
+	
 
 	<div id="current-work">
 		<h2><%=@blocks.first.category.name%></h2>
@@ -39,8 +39,8 @@
 
 	<!-- add tasks form -->
 	<div id="form-button" class="blocks">
-		<button type="button" class="btn btn-default">Add Task</button>
-		<%=render "tasks/task"%>
+		<button type="button" class="btn btn-default" data-toggle="modal" data-target="#TaskModal">Add Task</button>
+		
 	</div>
 	</div>
 	<!-- tasks added scrollable container -->
@@ -65,4 +65,6 @@
 
 
 </div>
+<%= render 'tasks/modal' %>
+<%=render "tasks/task"%>
 </body>

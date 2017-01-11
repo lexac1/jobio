@@ -4,7 +4,7 @@ $('#myModalNorm').modal({ show: false});
     // console.log("clicked");
     $(".start").hide();
     $("#settings-button").hide();
-    var fiftyFiveMinutes = 60 * 55,
+    var fiftyFiveMinutes = 60 * .1,
     display = document.querySelector('#time');
     startTimer(fiftyFiveMinutes, display);
     $('#line-container').show();
@@ -50,14 +50,14 @@ $('#myModalNorm').modal({ show: false});
 
   }) 
 
-   $("#form-button").on("click",function(e){
-        $("#TaskModal").modal('show')
-        $("#NEWTASK").on("click",function(e){
-          $("#TaskModal").modal({ show: false});
-          $(document).ready(ready);
-        })
+   // $("#form-button").on("click",function(e){
+   //      $("#TaskModal").modal('show')
+   //      $("#NEWTASK").on("click",function(e){
+   //        $("#TaskModal").modal({ show: false});
+   //        $(document).ready(ready);
+   //      })
 
-   })
+   // })
 
 
 });

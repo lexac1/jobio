@@ -13,13 +13,10 @@ class UsersController < ApplicationController
     @task = @user.tasks.new
   end
 
-  def sort
-    params[:order].each do |key,value|
-      Block.find(value[:id]).update_attribute(:priority,value[:position])
-    end
-    render :nothing => true
-  end
+  def update
 
+  end  
+ 
   private
 
   def task_params
