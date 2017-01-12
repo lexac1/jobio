@@ -4,7 +4,7 @@ $( document ).on('turbolinks:load', function(){
   // // setBlockName();
   // settingsBtnListener();
   var current_block = $('.sortable').children().toArray()
-
+  $("#time").hide();
 
 
 
@@ -17,6 +17,7 @@ var incriment = 0;
 
   $(".start").on("click", function(event){
     $(".start").hide();
+    $("#time").show();
     $("#settings-button").hide();
        var next = current_block.pop();
          displayBlock($(next));
