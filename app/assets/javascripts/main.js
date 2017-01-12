@@ -72,13 +72,33 @@ var countdown = function() {
   
 
 
-  $("#TaskModal").unbind().click(function(e){
+  $("#createTask").unbind().click(function(e){
     $("#TaskModal").modal('show');
-    $("#NEWTASK").unbind().click(function(e){
-      $("#TaskModal").modal({ show: false});
-      $(document).ready(ready);
-    });
+      $("#NEWTASK").unbind().click(function(e){
+         
+         var data = $(this).parent().serialize();
+         
+         e.preventDefault();      
+         
+         var name = $("#TaskModal").find(".modal-body").find(".form-group").find("input");
+       
+           $.ajax({
+            type: "Post",
+            url: '/tasks',
+            data: data    
+          })
+           .done(function(response){
+               console.log(response.category_id);
+               $("[data-id="+response.category_id+"]").find(".panel-body").prepend("<p>"+response.name+"</P>");
+               $("#TaskModal").modal('hide');
+                 $(document).ready(ready);
+                 $(name).val("");
+           })
+            
+      });
   });
+
+
 
 
 

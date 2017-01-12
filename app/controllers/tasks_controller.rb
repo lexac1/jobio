@@ -13,7 +13,9 @@ class TasksController < ApplicationController
   def create
     @user = User.find(current_user.id)
     @task = @user.tasks.create(task_params)
-    
+    if request.xhr? && @task.save 
+      render json: @task
+    end
   end  
 
   def update
