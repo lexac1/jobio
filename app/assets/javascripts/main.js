@@ -47,13 +47,13 @@ var countdown = function() {
 
     if (parseInt(i.innerHTML)===0) {
         
-
+       $("#here").removeClass("animated bounceIn");
        $("#myModalNorm").modal('show')
        $(".modal-footer").unbind().click(function() {
          $('#time').html(10);
        var next = current_block.pop();
          displayBlock($(next));
-       
+         
          $("#myModalNorm").modal('hide');
          $('#line-container').empty()
          initializeProgressBar();
@@ -86,7 +86,7 @@ var formBtnListener = function () {
 
 
 function displayBlock(current_block){
-    console.log(current_block[0])
+   
     if (current_block[0] === undefined) {
       $("#complete").modal('show');
       $(".modal-footer").unbind().click(function() {
@@ -95,7 +95,8 @@ function displayBlock(current_block){
 
     }
     $("#here").html("");
-  $("#here").append(current_block[0]);
+
+  $("#here").append(current_block[0]).addClass("animated bounceIn");
     // $(current_block).hide();
 }
 });
