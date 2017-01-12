@@ -87,7 +87,11 @@ var formBtnListener = function () {
 function displayBlock(current_block){
     console.log(current_block[0])
     if (current_block[0] === undefined) {
-      alert("Great Job today! keep up the pace");
+      $("#complete").modal('show');
+      $(".modal-footer").unbind().click(function() {
+          $("#out").children().trigger("click");
+      });
+
     }
     $("#here").html("");
   $("#here").append(current_block[0]);
