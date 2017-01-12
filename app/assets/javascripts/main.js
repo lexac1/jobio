@@ -1,13 +1,13 @@
 $( document ).on('turbolinks:load', function(){
   hideModal();
   startBtnListener();
-  // newTaskListener();
   setBlockName();
   settingsBtnListener();
 
 });
 
-var incriment = 1
+
+var incriment = 0;
 
 var hideModal = function() {
   $('#myModalNorm').modal({ show: false});
@@ -17,10 +17,11 @@ var startBtnListener = function() {
     $(".start").hide();
     $("#settings-button").hide();
     // var fiftyFiveMinutes = 60 * 55,
-    var fiftyFiveMinutes = 2
-    var display = document.querySelector('#time');
+    // var fiftyFiveMinutes = 2
+    // var display = document.querySelector('#time');
 
-    startTimer(fiftyFiveMinutes, display);
+  var timerId = setInterval(function(){countdown(); },1000);
+  initializeProgressBar();
 
   })
 }
@@ -32,37 +33,35 @@ function initializeProgressBar() {
     strokeWidth: 4,
     trailWidth: 1,
     color: '#ED6A5A',
-    duration: 2000
+    duration: 10000
   });
   line.set(1);
   line.animate(0,0);
 }
 
-function startTimer(duration, display) {
-  var timer = duration, minutes, seconds;
-  var interval = setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
 
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
+var countdown = function() {
+    var i = document.getElementById('time');
+    i.innerHTML = parseInt(i.innerHTML)-1;
 
-    display.textContent = minutes + ":" + seconds;
-    initializeProgressBar();
+    if (parseInt(i.innerHTML)==0) {
 
-    if (--timer < 0) {
-      timer = duration;
 
-      $("#myModalNorm").modal('show')
-      $(".modal-footer").on('click', function() {
-        setBlockName();
-        $("#myModalNorm").modal('toggle')
-        $('#line-container').empty()
-        initializeProgressBar();
-      })
-    }
-  }, 1000);
+       $("#myModalNorm").modal('show')
+       $(".modal-footer").on('click', function() {
+         setBlockName();
+         incriment +=1;
+         $("#myModalNorm").modal('toggle');
+         $('#line-container').empty()
+         initializeProgressBar();
+
+         $('#time').html(10);
+
+       });
+     }
 }
+// newTaskListener();
+
 
 // var newTaskListener = function() {
 //   $("#new_task").on("click", function() {
@@ -104,14 +103,14 @@ var formBtnListener = function () {
 }
 
 var setBlockName = function() {
-  if (incriment === 5) {
+  if (incriment == 5) {
     return;
   } else {
     var blockObj = $('.sortable').children()[incriment]
     var previousObj = $('.sortable').children()[incriment - 1]
     $(blockObj).show();
     $(previousObj).hide();
-    incriment += 1
+     incriment += 1;
     console.log(incriment)
   }
 }
