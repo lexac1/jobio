@@ -16,7 +16,7 @@ var incriment = 0;
     $(".start").hide();
     $("#time").show();
     $("#settings-button").hide();
-       var next = current_block.pop();
+       var next = current_block.shift();
          displayBlock($(next));
   var timerId = setInterval(function(){countdown(); },1000);
   initializeProgressBar();
@@ -48,7 +48,7 @@ var countdown = function() {
        $("#myModalNorm").modal('show')
        $(".modal-footer").unbind().click(function() {
          $('#time').html(10);
-       var next = current_block.pop();
+       var next = current_block.shift();
          displayBlock($(next));
          
          $("#myModalNorm").modal('hide');
