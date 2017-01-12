@@ -18,7 +18,8 @@ var incriment = 0;
   $(".start").on("click", function(event){
     $(".start").hide();
     $("#settings-button").hide();
-      // displayBlock($(current_block));
+       var next = current_block.pop();
+         displayBlock($(next));
   var timerId = setInterval(function(){countdown(); },1000);
   initializeProgressBar();
 
@@ -49,39 +50,16 @@ var countdown = function() {
        $("#myModalNorm").modal('show')
        $(".modal-footer").unbind().click(function() {
          $('#time').html(10);
-    // displayBlock($(current_block));
-    // console.log($(current_block))
-    var next = current_block.pop();
+       var next = current_block.pop();
          displayBlock($(next));
        
          $("#myModalNorm").modal('hide');
          $('#line-container').empty()
          initializeProgressBar();
 
-        
-
        });
      }
 }
-// newTaskListener();
-
-
-// var newTaskListener = function() {
-//   $("#new_task").on("click", function() {
-//     event.preventDefault();
-//
-//     var form = $(this);
-//     var method ="PUT"
-//     var url = "/tasks/1"
-//     var data = $(form).serialize();
-//     console.log('newtasklistener')
-//     $.ajax({
-//       method: method,
-//       url: url,
-//       data: data
-//     })
-//   })
-// }
 
 var settingsBtnListener = function() {
   $("#settings-button").on("click", function(event){
@@ -104,21 +82,6 @@ var formBtnListener = function () {
     })
   })
 }
-
-// var setBlockName = function() {
-//   if (incriment == 5) {
-//     return;
-//   } else {
-//     var blockObj = $('.sortable').children()[incriment]
-//     var previousObj = $('.sortable').children()[incriment - 1]
-//     $(blockObj).show();
-//     $(previousObj).hide();
-//      console.log(incriment)
-//      incriment ++;
-    
-//   }
-// }
-
 
 
 function displayBlock(current_block){
