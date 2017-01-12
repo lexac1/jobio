@@ -8,14 +8,8 @@
 	<div id="current-work">
 		<div id="time">10</div>
 		<div class="progress" id="line-container" style="display: none;"></div>
-		<div class="row">
-			<div class="col-xs-12 .col-sm-6 .col-lg-8 sortable">
-				<% if @blocks.any? %>
-				<%= render  partial: 'current-blocks', locals: {blocks: @blocks} %>
-				<% else %>
-				<p>No tasks found <%= link_to "Create Task", new_task_path %></p>
-				<% end %>
-			</div>
+		<div id="here">
+			
 		</div>
 	</div>
 		<div class="todo-list">

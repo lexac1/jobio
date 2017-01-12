@@ -1,27 +1,29 @@
 $( document ).on('turbolinks:load', function(){
-  hideModal();
-  startBtnListener();
-  setBlockName();
-  settingsBtnListener();
+  // hideModal();
+  // startBtnListener();
+  // // setBlockName();
+  // settingsBtnListener();
+  var current_block = $('.sortable').children().toArray()
 
-});
+
 
 
 var incriment = 0;
+ var current_block = $('.sortable').children().toArray()
 
-var hideModal = function() {
-  $('#myModalNorm').modal({ show: false});
-}
-var startBtnListener = function() {
+// var hideModal = function() {
+//   $('#myModalNorm').modal({ show: false});
+// }
+
   $(".start").on("click", function(event){
     $(".start").hide();
     $("#settings-button").hide();
-
+      // displayBlock($(current_block));
   var timerId = setInterval(function(){countdown(); },1000);
   initializeProgressBar();
 
   })
-}
+
 
 function initializeProgressBar() {
   $('#line-container').hide();
@@ -41,18 +43,22 @@ var countdown = function() {
     var i = document.getElementById('time');
     i.innerHTML = parseInt(i.innerHTML)-1;
 
-    if (parseInt(i.innerHTML)==0) {
-
+    if (parseInt(i.innerHTML)===0) {
+        
 
        $("#myModalNorm").modal('show')
-       $(".modal-footer").on('click', function() {
-         setBlockName();
-         incriment +=1;
-         $("#myModalNorm").modal('toggle');
+       $(".modal-footer").unbind().click(function() {
+         $('#time').html(10);
+    // displayBlock($(current_block));
+    // console.log($(current_block))
+    var next = current_block.pop();
+         displayBlock($(next));
+       
+         $("#myModalNorm").modal('hide');
          $('#line-container').empty()
          initializeProgressBar();
 
-         $('#time').html(10);
+        
 
        });
      }
@@ -99,15 +105,26 @@ var formBtnListener = function () {
   })
 }
 
-var setBlockName = function() {
-  if (incriment == 5) {
-    return;
-  } else {
-    var blockObj = $('.sortable').children()[incriment]
-    var previousObj = $('.sortable').children()[incriment - 1]
-    $(blockObj).show();
-    $(previousObj).hide();
-     incriment += 1;
-    console.log(incriment)
-  }
+// var setBlockName = function() {
+//   if (incriment == 5) {
+//     return;
+//   } else {
+//     var blockObj = $('.sortable').children()[incriment]
+//     var previousObj = $('.sortable').children()[incriment - 1]
+//     $(blockObj).show();
+//     $(previousObj).hide();
+//      console.log(incriment)
+//      incriment ++;
+    
+//   }
+// }
+
+
+
+function displayBlock(current_block){
+    console.log(current_block[0])
+    $("#here").html("");
+  $("#here").append(current_block[0]);
+    // $(current_block).hide();
 }
+});
