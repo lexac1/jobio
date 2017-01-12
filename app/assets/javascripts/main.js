@@ -18,6 +18,7 @@ var incriment = 0;
     $("#settings-button").hide();
        var next = current_block.shift();
          displayBlock($(next));
+         initializeProgressBar();
   // var timerId = setInterval(function(){countdown(); },1000);
   // initializeProgressBar();
 
@@ -30,6 +31,9 @@ function initializeProgressBar() {
   var line = new ProgressBar.Line('#line-container', {
     strokeWidth: 4,
     trailWidth: 1,
+    text: {
+      value: $('#time'),
+    },
     color: '#ED6A5A',
     duration: 10000
   });

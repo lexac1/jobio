@@ -20,9 +20,11 @@ body {
 
 #time{
     font-size: 30px;
-    color: orange;
+   
     margin: auto;
     width: 50px;
+    color: orange;
+      text-shadow: 2px 2px 2px rgba(52,58,64,.5)
 }
 #current-work{
    clear:both;
