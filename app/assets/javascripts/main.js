@@ -19,11 +19,17 @@ var incriment = 0;
        var next = current_block.shift();
          displayBlock($(next));
          initializeProgressBar();
+         animateTimer();
   // var timerId = setInterval(function(){countdown(); },1000);
   // initializeProgressBar();
 
   })
 
+  // TIMER ANIMATION
+ function animateTimer(){
+   $("#time").animate({ "right" : "450px"},10000);
+  }     
+ 
 
 function initializeProgressBar() {
   $('#line-container').hide();
@@ -31,9 +37,6 @@ function initializeProgressBar() {
   var line = new ProgressBar.Line('#line-container', {
     strokeWidth: 4,
     trailWidth: 1,
-    text: {
-      value: $('#time'),
-    },
     color: '#ED6A5A',
     duration: 10000
   });

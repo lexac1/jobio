@@ -18,11 +18,17 @@ body {
 
 }
 
+#animation-container{
+  margin:0 auto;
+  width:500px;
+  height:60px;
+}
+
 #time{
     font-size: 30px;
-   
-    margin: auto;
     width: 50px;
+    position:relative;
+    margin-left:450px;
     color: orange;
       text-shadow: 2px 2px 2px rgba(52,58,64,.5)
 }
