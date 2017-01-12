@@ -62,7 +62,7 @@ var countdown = function() {
      }
 }
 
-var settingsBtnListener = function() {
+
   $("#settings-button").on("click", function(event){
     event.preventDefault();
     $(document).ready(ready);
@@ -72,9 +72,9 @@ var settingsBtnListener = function() {
     $("#settings").addClass("animated slideInUp");
 
     });
-  }
+  
 
-var formBtnListener = function () {
+
   $("#form-button").on("click",function(e){
     $("#TaskModal").modal('show')
     $("#NEWTASK").on("click",function(e){
@@ -82,7 +82,7 @@ var formBtnListener = function () {
       $(document).ready(ready);
     })
   })
-}
+
 
 
 function displayBlock(current_block){
