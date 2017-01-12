@@ -7,6 +7,7 @@
 
 	<div id="current-work">
 		<div id="time">10</div>
+		
 		<div class="progress" id="line-container" style="display: none;"></div>
 		<div id="here">
 			
@@ -33,7 +34,7 @@
 
 	<!-- add tasks form -->
 	<div id="form-button" class="blocks">
-		<button type="button" class="btn btn-default" data-toggle="modal" data-target="#TaskModal">Add Task</button>
+		<button id ="createTask" type="button" class="btn btn-default" >Add Task</button>
 		
 	</div>
 	</div>
@@ -59,6 +60,7 @@
 
 
 </div>
+
 <%= render 'tasks/modal' %>
 <%= render 'tasks/task' %>
 <%= render 'tasks/complete' %>

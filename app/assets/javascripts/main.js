@@ -1,5 +1,5 @@
 $( document ).on('turbolinks:load', function(){
-  // hideModal();
+ 
   // startBtnListener();
   // // setBlockName();
   // settingsBtnListener();
@@ -11,10 +11,7 @@ $( document ).on('turbolinks:load', function(){
 var incriment = 0;
  var current_block = $('.sortable').children().toArray()
 
-// var hideModal = function() {
-//   $('#myModalNorm').modal({ show: false});
-// }
-
+ 
   $(".start").on("click", function(event){
     $(".start").hide();
     $("#time").show();
@@ -75,13 +72,33 @@ var countdown = function() {
   
 
 
-  $("#form-button").on("click",function(e){
-    $("#TaskModal").modal('show')
-    $("#NEWTASK").on("click",function(e){
-      $("#TaskModal").modal({ show: false});
-      $(document).ready(ready);
-    })
-  })
+  $("#createTask").unbind().click(function(e){
+    $("#TaskModal").modal('show');
+      $("#NEWTASK").unbind().click(function(e){
+         
+         var data = $(this).parent().serialize();
+         
+         e.preventDefault();      
+         
+         var name = $("#TaskModal").find(".modal-body").find(".form-group").find("input");
+       
+           $.ajax({
+            type: "Post",
+            url: '/tasks',
+            data: data    
+          })
+           .done(function(response){
+               console.log(response.category_id);
+               $("[data-id="+response.category_id+"]").find(".panel-body").prepend("<p>"+response.name+"</P>");
+               $("#TaskModal").modal('hide');
+                 $(document).ready(ready);
+                 $(name).val("");
+           })
+            
+      });
+  });
+
+
 
 
 
