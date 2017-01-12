@@ -3,20 +3,22 @@ class UsersController < ApplicationController
   # protect_from_forgery unless: -> { request.format.json }
   # before_action :update_block, only: :update
   def index
-   
-  end  
+
+  end
 
   def show
     @user = User.find(current_user.id)
-   @blocks = @user.blocks
+    @blocks = @user.blocks
     @tasks = Task.where(user_id: @user.id)
     @task = @user.tasks.new
   end
 
   def update
 
+
   end  
  
+
   private
 
   def task_params

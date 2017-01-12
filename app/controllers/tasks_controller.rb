@@ -10,14 +10,17 @@ class TasksController < ApplicationController
     @task = @user.tasks.new
   end
 
-  def create
-    @task = current_user.tasks.new(task_params)
-    if @task.save
-    	render json:@task
-    else
-    	redirect_to authenticated_root_path
-    p current_user.tasks
-    end
+  def update
+
+    p 'in the update route'
+    p params
+    # @task = current_user.tasks.new(task_params)
+    # if @task.save
+    # 	render json:@task
+    # else
+    # 	redirect_to authenticated_root_path
+    # p current_user.tasks
+    # end
   end
 
   def update
