@@ -20,8 +20,7 @@ var incriment = 0;
          displayBlock($(next));
          initializeProgressBar();
          animateTimer();
-  // var timerId = setInterval(function(){countdown(); },1000);
-  // initializeProgressBar();
+ 
 
   })
 
@@ -43,29 +42,6 @@ function initializeProgressBar() {
   line.set(1);
   line.animate(0,0);
 }
-
-
-// var countdown = function() {
-//     var i = document.getElementById('time');
-//     i.innerHTML = parseInt(i.innerHTML)-1;
-    
-//     if (parseInt(i.innerHTML)===0) {
-        
-//        $("#here").removeClass("animated bounceIn");
-//        $("#myModalNorm").modal('show')
-//        $(".modal-footer").unbind().click(function() {
-//          $('#time').html(10);
-//        var next = current_block.shift();
-//          displayBlock($(next));
-         
-//          $("#myModalNorm").modal('hide');
-//          $('#line-container').empty()
-//          initializeProgressBar();
-
-//        });
-//      }
-// }
-
 
 // new timer 
 // timer settings/ activate
