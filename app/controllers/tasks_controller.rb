@@ -10,6 +10,12 @@ class TasksController < ApplicationController
     @task = @user.tasks.new
   end
 
+  def create
+    @user = User.find(current_user.id)
+    @task = @user.tasks.create(task_params)
+    
+  end  
+
   def update
 
     p 'in the update route'

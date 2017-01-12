@@ -1,5 +1,5 @@
 $( document ).on('turbolinks:load', function(){
-  // hideModal();
+ 
   // startBtnListener();
   // // setBlockName();
   // settingsBtnListener();
@@ -11,10 +11,7 @@ $( document ).on('turbolinks:load', function(){
 var incriment = 0;
  var current_block = $('.sortable').children().toArray()
 
-// var hideModal = function() {
-//   $('#myModalNorm').modal({ show: false});
-// }
-
+ 
   $(".start").on("click", function(event){
     $(".start").hide();
     $("#time").show();
@@ -75,13 +72,13 @@ var countdown = function() {
   
 
 
-  $("#form-button").on("click",function(e){
-    $("#TaskModal").modal('show')
-    $("#NEWTASK").on("click",function(e){
+  $("#TaskModal").unbind().click(function(e){
+    $("#TaskModal").modal('show');
+    $("#NEWTASK").unbind().click(function(e){
       $("#TaskModal").modal({ show: false});
       $(document).ready(ready);
-    })
-  })
+    });
+  });
 
 
 

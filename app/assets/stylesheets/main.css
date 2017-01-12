@@ -15,6 +15,7 @@ body {
    margin:0 auto;
     width: 500px;
    -webkit-filter: blur(2px) drop-shadow(22px 22px 20px black); 
+
 }
 
 #time{
