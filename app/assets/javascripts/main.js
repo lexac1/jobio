@@ -26,7 +26,7 @@ var incriment = 0;
 
   // TIMER ANIMATION
  function animateTimer(){
-   $("#time").animate({ "right" : "450px"},10000);
+   $("#time").animate({ "right" : "450px"},3300000);
   }     
  
 
@@ -38,7 +38,7 @@ function initializeProgressBar() {
     color: '#A5E945',
     from: { color: '#ED6A5A'},
     to: {color: '#A5E945' },
-    duration: 10000,
+    duration: 3300000,
     step: (state, bar) => {
     bar.path.setAttribute('stroke', state.color);
   }
@@ -52,9 +52,9 @@ function initializeProgressBar() {
 
 // new timer 
 // timer settings/ activate
-  var fiveMinutes = 60 * 5,
+  var fiftyFiveMinutes = 60 * 55,
         display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
+    startTimer(fiftyFiveMinutes, display);
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
