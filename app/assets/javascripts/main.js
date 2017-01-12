@@ -18,8 +18,8 @@ var incriment = 0;
     $("#settings-button").hide();
        var next = current_block.shift();
          displayBlock($(next));
-  var timerId = setInterval(function(){countdown(); },1000);
-  initializeProgressBar();
+  // var timerId = setInterval(function(){countdown(); },1000);
+  // initializeProgressBar();
 
   })
 
@@ -38,26 +38,65 @@ function initializeProgressBar() {
 }
 
 
-var countdown = function() {
-    var i = document.getElementById('time');
-    i.innerHTML = parseInt(i.innerHTML)-1;
-
-    if (parseInt(i.innerHTML)===0) {
+// var countdown = function() {
+//     var i = document.getElementById('time');
+//     i.innerHTML = parseInt(i.innerHTML)-1;
+    
+//     if (parseInt(i.innerHTML)===0) {
         
-       $("#here").removeClass("animated bounceIn");
-       $("#myModalNorm").modal('show')
-       $(".modal-footer").unbind().click(function() {
-         $('#time').html(10);
-       var next = current_block.shift();
-         displayBlock($(next));
+//        $("#here").removeClass("animated bounceIn");
+//        $("#myModalNorm").modal('show')
+//        $(".modal-footer").unbind().click(function() {
+//          $('#time').html(10);
+//        var next = current_block.shift();
+//          displayBlock($(next));
          
-         $("#myModalNorm").modal('hide');
-         $('#line-container').empty()
-         initializeProgressBar();
+//          $("#myModalNorm").modal('hide');
+//          $('#line-container').empty()
+//          initializeProgressBar();
 
-       });
-     }
+//        });
+//      }
+// }
+
+
+// new timer 
+// timer settings/ activate
+  var fiveMinutes = 60 * 5,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+
+          $("#here").removeClass("animated bounceIn");
+          $("#myModalNorm").modal('show')
+          $(".modal-footer").unbind().click(function() {
+             timer = duration;
+             var next = current_block.shift();
+             displayBlock($(next));
+             $("#myModalNorm").modal('hide');
+             $('#line-container').empty()
+            initializeProgressBar();
+           }); 
+        }
+    }, 1000);
 }
+
+
+
+// -----------------------------------------
+
 
 
   $("#settings-button").on("click", function(event){
