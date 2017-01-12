@@ -123,6 +123,9 @@ var formBtnListener = function () {
 
 function displayBlock(current_block){
     console.log(current_block[0])
+    if (current_block[0] === undefined) {
+      alert("Great Job today! keep up the pace");
+    }
     $("#here").html("");
   $("#here").append(current_block[0]);
     // $(current_block).hide();
