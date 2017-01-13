@@ -1,5 +1,18 @@
 body {
   background-image: url("bg1.png");
+
+}
+
+/*footer tabs*/
+#resources { 
+ margin: 0 auto;
+    height: 30px; 
+    position: fixed; 
+    bottom:0%;
+    width:100%; 
+    background-color: #272b30;
+    opacity: 1;
+    text-align: center;
 }
 
 
@@ -89,8 +102,8 @@ body {
   border-radius: 3px;
   margin-bottom: 5px;
   margin-right: 2%;
-   box-shadow: 4px 4px 8px #363638;
-   opacity: 0.6;
+  box-shadow: 4px 4px 8px #363638;
+  opacity: 0.6;
 }
 
 
