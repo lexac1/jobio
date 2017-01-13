@@ -84,9 +84,22 @@ function startTimer(duration, display) {
 }
 
 // resources toggles--------------
-
+var resOn = false;
+var reachOn = false;
+var presenceOn = false;
+var algoOn = false;
+ 
  $("#resume").on("click", function(e){
-   $("#res").show();
+   if (resOn === false ){
+     $("#res").show();
+       resOn = true; 
+   } else{
+      $("#res").hide();
+        resOn = false; 
+
+
+   }
+   
 });
   
  $("#outreach").on("click", function(e){
@@ -105,7 +118,7 @@ function startTimer(duration, display) {
   });
 
 // -------------------------------------
-
+    
   $("#settings-button").on("click", function(event){
     event.preventDefault();
     $(document).ready(ready);
