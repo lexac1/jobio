@@ -38,10 +38,7 @@ function initializeProgressBar() {
     color: '#A5E945',
     from: { color: '#ED6A5A'},
     to: {color: '#A5E945' },
-    duration: 3300000,
-    step: (state, bar) => {
-    bar.path.setAttribute('stroke', state.color);
-  }
+    duration: 3300000
   });
   line.set(1);
   line.animate(0.0);
