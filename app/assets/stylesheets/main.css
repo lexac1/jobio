@@ -140,7 +140,16 @@ a{
 }
 
 
+/*devise forms*/
+.devise-container{
+  color:#2fd0fc;
+  margin-top: 5%;
+  margin-left:45%;
+}
 
+.devise-header{
+  color:#2fd0fc;
+}
 
 
 /*add tasks form*/
