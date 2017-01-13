@@ -94,6 +94,10 @@ function startTimer(duration, display) {
    $("#reach").show();
 });
 
+ $("#webpresence").on("click", function(e){
+
+   $("#presence").show();
+});
 
 // -------------------------------------
 
