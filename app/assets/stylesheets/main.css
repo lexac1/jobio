@@ -10,7 +10,8 @@ body {
   font-family: 'Bungee Shade', cursive;
   font-family: 'Fruktur', cursive;
   font-family: 'Rubik One', sans-serif;*/
-  font-family: 'Eczar', serif;
+  /*font-family: 'Eczar', serif;*/
+  font-family: 'Stalinist One', cursive;
   text-shadow: 3px 3px 3px rgba(30,33,38,.8) !important;
 } 
 a{
@@ -81,6 +82,8 @@ a{
 
 #current-work h2{
     color:#2fd0fc;
+    font-family: 'Molle', cursive;
+
 }
 
  .panel-default {
@@ -94,7 +97,14 @@ a{
 
 .panel-heading h3{
   color: #2fd0fc;
+  text-shadow: 3px 3px 3px rgba(30,33,38,.8);
 }
+
+.user-config {
+  color:#2fd0fc;
+  /*text-shadow: 3px 3px 3px rgba(30,33,38,.8);*/
+}
+
 
 
 
@@ -144,9 +154,20 @@ a{
  width: 500px;
  margin:0 auto;
 }
-#tasks-label h3{
-    text-align: center;
+
+ #your-tasks {
+  text-align: center;
+  color:#eb42f4;
+  text-shadow: 3px 3px 3px rgba(30,33,38,.8);
+  /*font-family: 'Molle', cursive;*/
+  /*font-family: 'Miniver', cursive;*/
+  /*font-family: 'Pacifico', cursive;*/
+  font-family: 'Mrs Sheppards', cursive;
+  /*font-family: 'Mr Dafoe', cursive;*/
+  /*font-family: 'Condiment', cursive;*/
+  /*font-family: 'Oregano', cursive;*/
 }
+
 
 /*advanced mode calendar*/
 #calendar{
