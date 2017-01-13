@@ -96,20 +96,29 @@ var algoOn = false;
    } else{
       $("#res").hide();
         resOn = false; 
-
-
    }
    
 });
   
  $("#outreach").on("click", function(e){
-
-   $("#reach").show();
+    if (reachOn === false ){
+     $("#reach").show();
+       reachOn = true; 
+   } else{
+      $("#res").hide();
+        reachOn = false; 
+   }
 });
 
  $("#webpresence").on("click", function(e){
-
-   $("#presence").show();
+     if (presenceOn === false){
+        $("#presence").show();
+          presenceOn = true;   
+     } else {
+      $("#presence").hide();
+        presenceOn = false;
+     }
+   
 });
   
  $("#algorithms").on("click", function(e){
