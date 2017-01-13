@@ -5,13 +5,21 @@ body {
 
 .navbar-brand  {
   color:#2fd0fc !important;
-}
+  /*font-family: 'Shrikhand', cursive;
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Bungee Shade', cursive;
+  font-family: 'Fruktur', cursive;
+  font-family: 'Rubik One', sans-serif;*/
+  font-family: 'Eczar', serif;
+} 
 a{
   color:#2fd0fc !important;
 }
 
 .start {
   color: #2fd0fc !important;
+    -webkit-filter: drop-shadow(6px 6px 6px black ) !important; 
+    text-shadow: 3px 3px 3px rgba(30,33,38,.8) !important;
 }
 /*footer tabs*/
 #resources { 
