@@ -93,7 +93,7 @@ var algoOn = false;
    if (resOn === false ){
      $("#res").show();
        resOn = true; 
-   } else{
+   } else {
       $("#res").hide();
         resOn = false; 
    }
@@ -104,8 +104,8 @@ var algoOn = false;
     if (reachOn === false ){
      $("#reach").show();
        reachOn = true; 
-   } else{
-      $("#res").hide();
+   } else {
+      $("#reach").hide();
         reachOn = false; 
    }
 });
@@ -122,8 +122,13 @@ var algoOn = false;
 });
   
  $("#algorithms").on("click", function(e){
-
-   $("#algo").show();
+    if (algoOn === false){
+      $("#algo").show();
+        algoOn = true;
+    } else {
+      $("#algo").hide();
+        algoOn = false;
+    }
   });
 
 // -------------------------------------
