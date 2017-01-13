@@ -1,14 +1,50 @@
 body {
   background-image: url("bg1.png");
+
 }
 
+.navbar-brand  {
+  color:#2fd0fc !important;
+  /*font-family: 'Shrikhand', cursive;
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Bungee Shade', cursive;
+  font-family: 'Fruktur', cursive;
+  font-family: 'Rubik One', sans-serif;*/
+  /*font-family: 'Eczar', serif;*/
+  font-family: 'Stalinist One', cursive;
+  text-shadow: 3px 3px 3px rgba(30,33,38,.8) !important;
+} 
+a{
+  color:#2fd0fc !important;
+}
 
+.start {
+  color: #2fd0fc !important;
+    -webkit-filter: drop-shadow(6px 6px 6px black ) !important; 
+    text-shadow: 3px 3px 3px rgba(30,33,38,.8) !important;
+}
+/*footer tabs*/
+#resources { 
+ margin: 0 auto;
+    height: 30px; 
+    position: fixed; 
+    bottom:0%;
+    width:100%; 
+    background-color: #272b30;
+    opacity: 1;
+    text-align: center;
+}
+
+#resources button{
+    background-color: rgba( 139, 139, 139, .3);
+    color: #2fd0fc;
+}
 
 /*start day button*/
 .start{
 	float:right;
 	margin-right: 5%;
-	color: orange;
+	color: #2fd0fc;
     margin-bottom: 20px;
 }
 #line-container{
@@ -33,7 +69,7 @@ body {
     border: 2px solid rgba( 139, 139, 139, .8);
     border-radius: 8%;
     background-color: rgba( 139, 139, 139, .3);
-    color: orange;
+    color: #2fd0fc;
       text-shadow: 3px 3px 3px rgba(30,33,38,.8)
 
 }
@@ -41,14 +77,17 @@ body {
    clear:both;
     text-align: center;
     margin-top: 10px;
-  
-
+    -webkit-filter: drop-shadow(6px 6px 6px black );
 }
 
 #current-work h2{
-    color:orange;
+    color:#2fd0fc;
+    font-family: 'Molle', cursive;
 
+}
 
+ .panel-default {
+  -webkit-filter: drop-shadow(6px 6px 6px black );
 }
 
 .block {
@@ -57,8 +96,15 @@ body {
 }
 
 .panel-heading h3{
-  color: orange;
+  color: #2fd0fc;
+  text-shadow: 3px 3px 3px rgba(30,33,38,.8);
 }
+
+.user-config {
+  color:#2fd0fc;
+  /*text-shadow: 3px 3px 3px rgba(30,33,38,.8);*/
+}
+
 
 
 
@@ -69,7 +115,7 @@ body {
     width: 100%;
 }
 .sortable .panel-title{
-    color: orange;
+    color: #2fd0fc;
  }
  .panel-heading{
     background-color: #545966;
@@ -89,12 +135,21 @@ body {
   border-radius: 3px;
   margin-bottom: 5px;
   margin-right: 2%;
-   box-shadow: 4px 4px 8px #363638;
-   opacity: 0.6;
+  box-shadow: 4px 4px 8px #363638;
+  opacity: 0.6;
 }
 
 
+/*devise forms*/
+.devise-container{
+  color:#2fd0fc;
+  margin-top: 5%;
+  margin-left:45%;
+}
 
+.devise-header{
+  color:#2fd0fc;
+}
 
 
 /*add tasks form*/
@@ -108,9 +163,20 @@ body {
  width: 500px;
  margin:0 auto;
 }
-#tasks-label h3{
-    text-align: center;
+
+ #your-tasks {
+  text-align: center;
+  color:#eb42f4;
+  text-shadow: 3px 3px 3px rgba(30,33,38,.8);
+  /*font-family: 'Molle', cursive;*/
+  /*font-family: 'Miniver', cursive;*/
+  /*font-family: 'Pacifico', cursive;*/
+  font-family: 'Mrs Sheppards', cursive;
+  /*font-family: 'Mr Dafoe', cursive;*/
+  /*font-family: 'Condiment', cursive;*/
+  /*font-family: 'Oregano', cursive;*/
 }
+
 
 /*advanced mode calendar*/
 #calendar{

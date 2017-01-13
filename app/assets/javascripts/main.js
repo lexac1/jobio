@@ -83,12 +83,56 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
+// resources toggles--------------
+var resOn = false;
+var reachOn = false;
+var presenceOn = false;
+var algoOn = false;
+ 
+ $("#resume").on("click", function(e){
+   if (resOn === false ){
+     $("#res").show();
+       resOn = true; 
+   } else {
+      $("#res").hide();
+        resOn = false; 
+   }
+   
+});
+  
+ $("#outreach").on("click", function(e){
+    if (reachOn === false ){
+     $("#reach").show();
+       reachOn = true; 
+   } else {
+      $("#reach").hide();
+        reachOn = false; 
+   }
+});
 
+ $("#webpresence").on("click", function(e){
+     if (presenceOn === false){
+        $("#presence").show();
+          presenceOn = true;   
+     } else {
+      $("#presence").hide();
+        presenceOn = false;
+     }
+   
+});
+  
+ $("#algorithms").on("click", function(e){
+    if (algoOn === false){
+      $("#algo").show();
+        algoOn = true;
+    } else {
+      $("#algo").hide();
+        algoOn = false;
+    }
+  });
 
-// -----------------------------------------
-
-
-
+// -------------------------------------
+    
   $("#settings-button").on("click", function(event){
     event.preventDefault();
     $(document).ready(ready);
