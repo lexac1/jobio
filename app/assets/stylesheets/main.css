@@ -81,8 +81,10 @@ a{
 
 #current-work h2{
     color:#2fd0fc;
+}
 
-
+ .panel-default {
+  -webkit-filter: drop-shadow(6px 6px 6px black );
 }
 
 .block {
