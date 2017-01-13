@@ -83,11 +83,14 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
+// resources toggles--------------
+
+ $("#resume").on("click", function(e){
+   $("#res").show();
+});
 
 
-// -----------------------------------------
-
-
+// -------------------------------------
 
   $("#settings-button").on("click", function(event){
     event.preventDefault();
