@@ -1,4 +1,4 @@
-<script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.6.0/dist/progressbar.js"></script>
+<script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
 <h2 id="user" style="display: none;"><%= current_user.id %></h2>
 <div id="main-page">
 	<button class="start btn btn-primary">Start Day</button>
@@ -6,14 +6,26 @@
 	
 
 	<div id="current-work">
-		<div id="time">10</div>
+		<div id="animation-container">
+			<div id="time"></div>
+		</div>
 		<div class="progress" id="line-container" style="display: none;"></div>
 		<div id="here">
 			
 		</div>
 	</div>
 		<div class="todo-list">
+		   <span id="res" style="display:none;"><%= render "resources/resume_resources"%></span>
+		   <span id="reach" style="display:none;"><%= render "resources/outreach_resources"%></span>
+		   <span id="presence" style="display:none;"><%= render "resources/web_presence"%></span>
+		   <span id="algo" style="display:none;"><%= render "resources/algorithms"%></span>
 		</div>
+	<div id="resources">
+		<button id="resume">Resume Resources</button>
+		<button id="outreach">Outreach Resources</button>
+		<button id="webpresence">Web Presence Resources</button>
+		<button id="algorithms">Algorithm Resources</button>
+	</div>
 </div>
 
 <div id="settings" style="display:none;">
@@ -33,13 +45,13 @@
 
 	<!-- add tasks form -->
 	<div id="form-button" class="blocks">
-		<button type="button" class="btn btn-default" data-toggle="modal" data-target="#TaskModal">Add Task</button>
+		<button id ="createTask" type="button" class="btn btn-default" >Add Task</button>
 		
 	</div>
 	</div>
 	<!-- tasks added scrollable container -->
 	<div id="tasks-label">
-		<h3>Your Tasks</h3>
+		<h1 id="your-tasks">Your Tasks</h1>
 			<div class="row">
 				<div class="col-xs-12 .col-sm-6 .col-lg-8 sortable">
 					<% if @blocks.any? %>
@@ -59,6 +71,7 @@
 
 
 </div>
+
 <%= render 'tasks/modal' %>
 <%= render 'tasks/task' %>
 <%= render 'tasks/complete' %>

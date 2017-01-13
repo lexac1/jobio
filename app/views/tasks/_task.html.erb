@@ -19,7 +19,7 @@
 
             <!-- Modal Body -->
             <div class="modal-body">
-
+            
               <%= bootstrap_form_for @task do |f| %>
                 <%= label_tag(:name, "Task Description: ") %>
                   <%= f.text_field :name, :placeholder => "name"%><br>
@@ -30,7 +30,7 @@
                     <% end %>
                   <%= f.hidden_field :complete, :value => false %>
                   <% end %><br>
-                <%= f.submit "Add Task", :class => "btn btn-default", :id => "NEWTASK" %>
+                <%= f.submit "Add Task", :class => "btn btn-default", :id => "NEWTASK"  %>
               <% end %>
              </div>
              </div>
