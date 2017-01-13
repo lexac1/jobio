@@ -4,14 +4,14 @@ body {
 }
 
 .navbar-brand  {
-  color:orange !important;
+  color:#2fd0fc !important;
 }
 a{
-  color:orange !important;
+  color:#2fd0fc !important;
 }
 
 .start {
-  color: orange !important;
+  color: #2fd0fc !important;
 }
 /*footer tabs*/
 #resources { 
@@ -27,14 +27,14 @@ a{
 
 #resources button{
     background-color: rgba( 139, 139, 139, .3);
-    color: orange;
+    color: #2fd0fc;
 }
 
 /*start day button*/
 .start{
 	float:right;
 	margin-right: 5%;
-	color: orange;
+	color: #2fd0fc;
     margin-bottom: 20px;
 }
 #line-container{
@@ -59,7 +59,7 @@ a{
     border: 2px solid rgba( 139, 139, 139, .8);
     border-radius: 8%;
     background-color: rgba( 139, 139, 139, .3);
-    color: orange;
+    color: #2fd0fc;
       text-shadow: 3px 3px 3px rgba(30,33,38,.8)
 
 }
@@ -72,7 +72,7 @@ a{
 }
 
 #current-work h2{
-    color:orange;
+    color:#2fd0fc;
 
 
 }
@@ -83,7 +83,7 @@ a{
 }
 
 .panel-heading h3{
-  color: orange;
+  color: #2fd0fc;
 }
 
 
@@ -95,7 +95,7 @@ a{
     width: 100%;
 }
 .sortable .panel-title{
-    color: orange;
+    color: #2fd0fc;
  }
  .panel-heading{
     background-color: #545966;
