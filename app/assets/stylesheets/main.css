@@ -3,6 +3,16 @@ body {
 
 }
 
+.navbar-brand  {
+  color:orange !important;
+}
+a{
+  color:orange !important;
+}
+
+.start {
+  color: orange !important;
+}
 /*footer tabs*/
 #resources { 
  margin: 0 auto;
@@ -15,7 +25,10 @@ body {
     text-align: center;
 }
 
-
+#resources button{
+    background-color: rgba( 139, 139, 139, .3);
+    color: orange;
+}
 
 /*start day button*/
 .start{
