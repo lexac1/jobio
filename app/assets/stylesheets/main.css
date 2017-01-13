@@ -76,8 +76,7 @@ a{
    clear:both;
     text-align: center;
     margin-top: 10px;
-  
-
+    -webkit-filter: drop-shadow(6px 6px 6px black );
 }
 
 #current-work h2{
