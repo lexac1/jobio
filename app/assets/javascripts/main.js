@@ -98,6 +98,11 @@ function startTimer(duration, display) {
 
    $("#presence").show();
 });
+  
+ $("#algorithms").on("click", function(e){
+
+   $("#algo").show();
+  });
 
 // -------------------------------------
 
