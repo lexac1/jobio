@@ -11,6 +11,7 @@ body {
   font-family: 'Fruktur', cursive;
   font-family: 'Rubik One', sans-serif;*/
   font-family: 'Eczar', serif;
+  text-shadow: 3px 3px 3px rgba(30,33,38,.8) !important;
 } 
 a{
   color:#2fd0fc !important;
