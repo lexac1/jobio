@@ -88,6 +88,11 @@ function startTimer(duration, display) {
  $("#resume").on("click", function(e){
    $("#res").show();
 });
+  
+ $("#outreach").on("click", function(e){
+
+   $("#reach").show();
+});
 
 
 // -------------------------------------
